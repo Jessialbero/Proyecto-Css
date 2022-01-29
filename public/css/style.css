@@ -27,14 +27,26 @@ header{
 
 }
 
-#form {
+#searchbar {
     position: relative;  
     margin: 2em auto;
     padding: 2em;  
+    border-radius: 40px;
 }
 
 #cuotas{
     text-align: center;
+}
+
+.opciones{
+    margin: 1%;
+    list-style: none;
+}
+
+.opciones{
+    margin: 1%;
+    list-style: none;
+    padding-top: 10px;
 }
 
 .burger-menu{
@@ -67,8 +79,28 @@ header{
        font-weight: bold;
    }
 
-   footer article i {
-       color: #1259c3;
-       size: 2em;
-       margin-bottom: 10px;
-   }
+ 
+
+   footer{
+    background-color: #Fff;
+    text-align: center;
+   
+  }
+  footer i{
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-left:1em;
+    margin-right: 1em;
+    size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+  }
+  footer h3{
+    font-size: 16px;
+    margin-bottom: 0.5em;
+  }
+  footer p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+   
