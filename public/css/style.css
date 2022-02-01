@@ -13,19 +13,47 @@ Precios: 18px
 Descuentos: 16px
 Descripciones: 16px*/
 
-*{
-    margin: 0px;
-    padding: 0px;
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+    width: 100%;
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+header div.logo,
+header .form{
+    width: 50%;
 }
 
 header{
     background-color: #EAC926;
-    width: 100%;
     display: block;
     padding: 10px;
     font-family: 'Roboto', 12px, sans-serif;
 
 }
+
+header div.logo{
+    padding: 10px;
+}
+header .form{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+}
+header nav{
+    font-size: 12px;
+    margin-left: 20px;
+}
+
 
 #searchbar {
     position: relative;  
@@ -38,15 +66,24 @@ header{
     text-align: center;
 }
 
-.opciones{
-    margin: 1%;
-    list-style: none;
+div .banner{
+    width: 100%;
 }
 
 .opciones{
     margin: 1%;
     list-style: none;
     padding-top: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.opciones1{
+    margin: 1%;
+    list-style: none;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #000;
 }
 
 .burger-menu{
@@ -64,8 +101,15 @@ header{
        color: #000;
    }
 
-   footer {
+   main{
+       width: 90%;
+   }
 
+   section{
+        margin: 10px #ebebeb;
+        border-top: 1px solid #ebebeb;
+        padding: 15px;
+        background-color: white;
    }
 
    footer article{
@@ -83,8 +127,7 @@ header{
 
    footer{
     background-color: #Fff;
-    text-align: center;
-   
+    text-align: center;   
   }
   footer i{
     font-size: 2em;
@@ -92,7 +135,7 @@ header{
     margin-left:1em;
     margin-right: 1em;
     size: 2em;
-    margin-bottom: 10px;
+    margin-top: 5%;
     color: #1259c3;
   }
   footer h3{
@@ -102,5 +145,39 @@ header{
   footer p {
     font-size: 12px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
   }
    
+  @media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.productos article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.productos article{
+        width: 22%;
+    }
+}
