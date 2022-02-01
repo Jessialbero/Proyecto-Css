@@ -152,6 +152,7 @@ div.ultimavisita,
 div.ofertas{
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .price{
