@@ -13,10 +13,15 @@ Precios: 18px
 Descuentos: 16px
 Descripciones: 16px*/
 
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
-    width: 100%;
 }
 
 h3{
@@ -26,8 +31,6 @@ h3{
 p{
     font-size: 12px;
 }
-
-/*Header*/
 
 div.top-header{
     display: flex;
@@ -66,14 +69,29 @@ header nav{
 
 header ul li{
     list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.ulderecha{
+    list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 1px;
+    margin-inline-end: 1px;
+    padding-inline-start: 40px;
 }
 
 header ul li a{
     text-decoration: none;
     color: #000;
+    
 }
 
-header .searchbar .input{
+header .form .input{
     background-color: #FFF;
     border: 1px solid #000;
     outline: none;
@@ -88,132 +106,25 @@ header .form .submit{
     width: 10%;
 }
 
-header div.logo,
-header .form{
-    width: 50%;
-}
-
-header{
-    background-color: #EAC926;
-    display: block;
-    padding: 10px;
-    font-family: 'Roboto', 12px, sans-serif;
-
-}
-
-header div.logo{
-    padding: 10px;
-}
-header .form{
-    display: flex;
-    align-items: center;
-    padding: 2px;
-    font-size: 11px;
-}
-header nav{
-    font-size: 12px;
-    margin-left: 20px;
-}
-
-
-.searchbar {
-    position: relative;  
-    margin: 2em auto;
-    padding: 2em;  
-    border-radius: 40px;
-}
-
-#cuotas{
+div.burger-menu{
     text-align: center;
 }
 
-div .banner{
-    width: 100%;
-}
-
-.opciones{
-    margin: 1%;
-    list-style: none;
-    padding-top: 10px;
-    text-decoration: none;
-    color: #000;
-}
-
-.opciones1{
-    margin: 1%;
-    list-style: none;
-    padding-top: 10px;
-    text-decoration: none;
-    color: #000;
-}
-
-.burger-menu{
-    margin: 1em auto;
-    text-align: center;
-    background-color: #1259c3;
-    width: fit-content;
-    padding: 0.5em;
+div.burger-menu i{
+    background-color: #0044AA;
     border-radius: 5px;
-    color: #fff
-      }
-
-   .lista{
-       text-decoration: none;
-       color: #000;
-   }
-
-   main{
-    width: 90%;
-    margin: 0 auto;
-   }
-
-   main div article{
-    background-color: #fff;    
-    margin: 10px 0px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
 }
 
-main div article img{
-    width: 100%;
-}
-
-main div article i,
-.discount{
-    color: #39b54a;
-}
-
-main div article i{
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-}
-
-main div h3{
-    margin: 20px 0px;
-}
-
-article div.main-article{
-    width: 100%;
+div.last-visit,
+div.offers{
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
-    border-top: 1px solid #ebebeb;
-    position: relative;
-    padding: 15px;
-}
-
-div.ultimavisita,
-div.ofertas{
-    display: flex;
-    flex-wrap: wrap;
-
 }
 
 .price{
@@ -248,6 +159,13 @@ section.banner img{
 main{
     width: 90%;
     margin: 0 auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    list-style-type: none;
 }
 
 main section article{
@@ -292,51 +210,46 @@ article div.main-article{
     padding: 15px;
 }
 
-   section{
-        margin: 10px #ebebeb;
-        border-top: 1px solid #ebebeb;
-        padding: 15px;
-        background-color: white;
-   }
+footer article{
+    text-align: center;
+    margin: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
 
-   footer article{
-       text-align: center;
-       margin: 15px;
-       margin-left: 25%;
-       margin-right: 25%;
-   }
+footer h4{
+    font-weight: bold;
+}
 
-   footer h4{
-       font-weight: bold;
-   }
 
- 
 
-   footer{
-    background-color: #Fff;
-    text-align: center;   
-  }
-  footer i{
-    font-size: 2em;
-    margin-bottom: 10px;
-    margin-left:1em;
-    margin-right: 1em;
-    size: 2em;
-    margin-top: 5%;
-    color: #1259c3;
-  }
-  footer h3{
-    font-size: 16px;
-    margin-bottom: 0.5em;
-  }
-  footer p {
-    font-size: 12px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-  }
-   
-  @media (min-width: 361px){
+footer{
+ background-color: #Fff;
+ text-align: center;
+
+}
+footer i{
+ font-size: 2em;
+ margin-bottom: 10px;
+ margin-left:1em;
+ margin-right: 1em;
+ size: 2em;
+ margin-top: 15px;
+ color: #1259c3;
+ }
+
+ footer h3{
+ font-size: 16px;
+ margin-bottom: 0.5em;
+}
+footer p {
+ font-size: 12px;
+ margin-bottom: 10px;
+ display: flex;
+ justify-content: center;
+}
+
+@media (min-width: 361px){
     main section article .description{
         display: block;
     }
@@ -345,7 +258,7 @@ article div.main-article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
-    main section div.productos{
+    main section div.products{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -353,7 +266,7 @@ article div.main-article{
         align-items: flex-start;
     }
     
-    main section div.productos article{
+    main section div.products article{
         width: 45%;
     }
 
@@ -364,7 +277,7 @@ article div.main-article{
 }
 
 @media (min-width: 769px){
-    main section div.productos article{
+    main section div.products article{
         width: 22%;
     }
 }
